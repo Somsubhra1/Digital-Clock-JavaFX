@@ -13,12 +13,16 @@ import java.util.ResourceBundle;
 
 public class Controller implements Runnable, Initializable {
 
+    //Linking FXML components to Java code :
+
     @FXML
     Label dateLabel;
     @FXML
     Label timeLabel;
     @FXML
     Label dayLabel;
+
+    //Initializing variables
 
     private Thread thread = null;
     private String time = "", month = "", day = "";
@@ -28,7 +32,7 @@ public class Controller implements Runnable, Initializable {
 
 
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    public void initialize(URL location, ResourceBundle resources) { //Start timer using thread on application startup
         thread = new Thread(this);
         thread.start();
     }
@@ -36,6 +40,8 @@ public class Controller implements Runnable, Initializable {
     public void run() {
         try {
             while (true) {
+
+                //Setting date format and variables:
 
                 calendar = Calendar.getInstance();
 
@@ -51,6 +57,8 @@ public class Controller implements Runnable, Initializable {
                 date = calendar.getTime();
                 day = format.format(date);
 
+                //Setting elements to pane:
+
                 Platform.runLater(new Runnable() {
                     @Override
                     public void run() {
@@ -63,7 +71,7 @@ public class Controller implements Runnable, Initializable {
 
                 Thread.sleep(1000);
             }
-        } catch (Exception e) {
+        } catch (Exception e) { //Error check
             dateLabel.setText("");
             timeLabel.setText("Error occurred!!");
             dayLabel.setText("");

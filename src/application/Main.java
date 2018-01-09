@@ -16,6 +16,8 @@ public class Main extends Application {
         primaryStage.setTitle("Digital Clock");
         primaryStage.setScene(new Scene(root, 300, 235));
         primaryStage.show();
+
+        //Setting close operation:
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent event) {
@@ -23,7 +25,6 @@ public class Main extends Application {
             }
         });
     }
-
 
     public static void main(String[] args) {
         launch(args);
