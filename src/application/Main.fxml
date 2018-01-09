@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="500.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <Label fx:id="dateLabel" layoutX="14.0" layoutY="33.0" prefHeight="49.0" prefWidth="371.0" text="Label" textFill="#1f8a2b">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="timeLabel" layoutX="71.0" layoutY="91.0" prefHeight="49.0" prefWidth="371.0" text="Label" textFill="#1f8a2b">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="dayLabel" layoutX="150.0" layoutY="150.0" prefHeight="49.0" prefWidth="371.0" text="Label" textFill="#1f8a2b">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
